@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Nasim Mahmud | Personal Portfolio</title>
+<meta name="description" content="Personal portfolio of Md. Nasim Mahmud">
+<style>
+:root{
+  --bg:#03111b; --panel:rgba(3,22,35,.82); --panel2:rgba(4,29,45,.72);
+  --line:rgba(110,184,255,.28); --gold:#ffd84d; --gold2:#f5c62e;
+  --text:#f7f9fc; --muted:#c5d1dc; --blue:#5ab8ff;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#03111b;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+linear-gradient(90deg,rgba(1,12,20,.94) 0%,rgba(1,17,28,.72) 43%,rgba(1,17,28,.5) 100%),
+url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;}
+body:after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(0,10,18,.28)}
+a{color:inherit;text-decoration:none}
+.container{width:min(1500px,94%);margin:auto}
+nav{height:74px;position:sticky;top:0;z-index:20;background:rgba(1,16,27,.91);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{height:100%;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;min-width:350px}
+.logo{font-weight:900;font-size:43px;color:var(--gold);letter-spacing:-5px;line-height:1}
+.brand strong{font-size:21px}.brand span{display:block;color:#fff;font-size:15px;margin-top:4px}
+.menu{display:flex;gap:28px;align-items:center;flex:1;justify-content:center}
+.menu a{font-weight:700;font-size:16px;padding:27px 2px;position:relative}
+.menu a:hover,.menu a.active{color:var(--gold)}
+.menu a.active:after{content:"";position:absolute;left:0;right:0;bottom:10px;height:3px;background:var(--gold)}
+.cv{border:1px solid #8fcfff;border-radius:15px;padding:10px 20px;font-weight:800;white-space:nowrap}
+.hero{min-height:350px;padding:0 0 10px;display:grid;grid-template-columns:340px 1fr;align-items:center;gap:24px}
+.heroPhoto{height:350px;display:flex;align-items:end;justify-content:center;overflow:hidden}
+.heroPhoto img{height:350px;width:350px;object-fit:cover;object-position:center top;filter:saturate(.96)}
+.heroText{padding-top:12px}
+.hello{font-size:34px;font-weight:800;margin:0 0 4px}
+.name{font-size:58px;line-height:1.05;margin:0 0 6px;font-weight:900;text-shadow:0 4px 18px #000}
+.name span{color:var(--gold)}
+.tag{font-size:21px;font-weight:700;margin:8px 0 13px}
+.quote{border-left:4px solid var(--gold);padding-left:15px;font-size:17px;line-height:1.45;max-width:670px}
+.buttons{display:flex;gap:14px;margin-top:18px}.btn{padding:12px 24px;border-radius:28px;font-weight:800;border:1px solid #6fc4ff}.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
+.location{justify-self:end;align-self:end;padding:0 25px 12px;text-align:left}.location b{font-size:17px}.location small{display:block;color:#fff;margin-top:4px}
+.cards{display:grid;grid-template-columns:1.35fr 1fr 1fr 1.3fr 1.2fr;gap:10px;margin:0 0 12px}
+.card{background:linear-gradient(135deg,rgba(5,35,55,.9),rgba(3,20,32,.83));border:1px solid var(--line);border-radius:12px;padding:12px 15px;min-height:78px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 28px rgba(0,0,0,.2)}
+.icon{width:48px;height:48px;flex:none;border-radius:11px;background:rgba(22,84,125,.35);display:grid;place-items:center;font-size:25px}
+.card b{font-size:16px}.card small{display:block;color:#fff;margin-top:4px;font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1.32fr;gap:12px}
+.panel{background:linear-gradient(145deg,rgba(2,23,36,.93),rgba(1,15,25,.78));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+h2{font-size:28px;margin:0 0 13px}.under{height:3px;width:58px;background:var(--gold);margin:-8px 0 15px}
+.about p{font-size:15px;line-height:1.5;color:#f3f5f7;margin:0 0 11px}
+.contactline{display:flex;gap:10px;align-items:center;margin:8px 0;font-size:14px}.contactline span:first-child{font-size:21px}.social{display:flex;gap:12px;margin-top:15px}.social a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-weight:900}
+.timeline{position:relative;margin-left:11px;padding-left:27px;border-left:2px solid rgba(255,255,255,.35)}
+.edu{position:relative;margin:0 0 18px}.dot{position:absolute;left:-36px;top:8px;width:15px;height:15px;border-radius:50%;background:var(--gold);border:3px solid #082033}
+.edu b{font-size:16px}.edu small{display:block;color:#fff;line-height:1.45;margin-top:3px}.pill{float:right;border:1px solid #30df91;color:#55efaa;border-radius:15px;padding:3px 9px;font-size:11px}
+.usg{margin-top:10px;border:1px solid var(--line);border-radius:13px;padding:12px;display:flex;align-items:center;gap:13px}.usgmark{font-size:28px;font-weight:900;color:#fff}
+.side h2{margin-bottom:8px}.travel{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.travel img,.sport img{width:100%;height:105px;object-fit:cover;border-radius:9px}.travel b{display:block;font-size:13px;margin-top:5px}.travel small{color:#fff;font-size:11px}
+.sports{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.sport{position:relative}.sport img{height:125px}.sport b{position:absolute;left:8px;bottom:7px;text-shadow:0 2px 7px #000}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8px;border:1px solid var(--line);border-radius:12px;overflow:hidden}.quick div{padding:10px;border-right:1px solid var(--line);font-size:12px}.quick div:last-child{border:0}.quick b{display:block;font-size:13px}
+footer{text-align:center;padding:20px;color:var(--gold);font-style:italic;font-weight:700}
+@media(max-width:1050px){.brand{min-width:auto}.menu{gap:14px}.menu a{font-size:14px}.cv{display:none}.hero{grid-template-columns:270px 1fr}.heroPhoto,.heroPhoto img{height:310px;width:300px}.name{font-size:45px}.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr 1fr}.side{grid-column:1/-1}}
+@media(max-width:720px){nav{height:auto}.navin{padding:10px 0;flex-wrap:wrap}.brand{width:100%}.menu{order:3;width:100%;overflow:auto;justify-content:flex-start}.menu a{padding:8px 4px}.hero{grid-template-columns:1fr;min-height:auto}.heroPhoto{height:280px}.heroPhoto img{height:280px}.heroText{padding:8px 5px}.name{font-size:39px}.hello{font-size:27px}.tag{font-size:17px}.cards,.grid{grid-template-columns:1fr}.travel{grid-template-columns:repeat(2,1fr)}.sports{grid-template-columns:1fr}.quick{grid-template-columns:1fr 1fr}.quick div:nth-child(2){border-right:0}.quick div:nth-child(1),.quick div:nth-child(2){border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="brand" href="#home"><div class="logo">NM</div><div><strong>Md. Nasim Mahmud</strong><span>Student &nbsp;|&nbsp; Explorer &nbsp;|&nbsp; USG Team</span></div></a>
+  <div class="menu"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#travel">Travel</a><a href="#sports">Sports</a><a href="#usg">USG</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+  <a class="cv" href="Md_Nasim_Mahmud_CV.pdf" download>⇩ &nbsp; Download CV</a>
+</div></nav>
+
+<main class="container" id="home">
+<section class="hero">
+  <div class="heroPhoto"><img src="nasim-portrait.png" alt="Md. Nasim Mahmud"></div>
+  <div class="heroText">
+    <p class="hello">Hello, I’m</p><h1 class="name">Md. Nasim <span>Mahmud</span></h1>
+    <div class="tag">Student &nbsp;|&nbsp; Explorer &nbsp;|&nbsp; USG Member &nbsp;|&nbsp; Dreamer</div>
+    <div class="quote">“Travel the world, learn new things, make good connections and always try to be a better version of yourself.”</div>
+    <div class="buttons"><a class="btn primary" href="#contact">👤 &nbsp; Contact Me</a><a class="btn" href="#gallery">▣ &nbsp; View Gallery</a></div>
+  </div>
+  <div class="location">📍 <b>Kathmandu, Nepal</b><small>A place that stole my heart</small></div>
+</section>
+
+<section class="cards">
+<div class="card"><div class="icon">🎓</div><div><b>Currently Studying</b><small>B.Sc. (Honours) 4th Year<br>Zoology</small></div></div>
+<div class="card"><div class="icon">📍</div><div><b>From</b><small>Bogura, Bangladesh 🇧🇩</small></div></div>
+<div class="card"><div class="icon">🏔️</div><div><b>Travelled</b><small>Bangladesh & Nepal 🇳🇵</small></div></div>
+<div class="card"><div class="icon">🏛️</div><div><b>Working At</b><small>United Stars Global (USG)</small></div></div>
+<div class="card"><div class="icon">❤️</div><div><b>Interests</b><small>Travel | Football<br>Cricket | Volleyball</small></div></div>
+</section>
+
+<section class="grid">
+<div class="panel about" id="about"><h2>About Me</h2><div class="under"></div>
+<p>I’m Md. Nasim Mahmud, a passionate traveler, nature lover and curious learner. I am currently studying B.Sc. (Honours) 4th Year in Zoology.</p>
+<p>I love exploring new places, meeting new people and capturing beautiful moments. I have travelled to many places across Bangladesh and also visited Nepal.</p>
+<p>I am also working with a multinational company named USG.</p><p>I enjoy playing football, cricket and volleyball.</p>
+<div class="contactline"><span>📞</span><span>Phone<br><b>+880 1518 993160</b></span></div>
+<div class="contactline"><span>✉️</span><span>Email<br><b>nasimmahmud5942@gmail.com</b></span></div>
+<div class="social">
+<a href="https://www.facebook.com/share/14yjES6FPg8/" target="_blank" rel="noopener" title="Facebook">f</a>
+<a href="#" aria-label="YouTube" title="YouTube">▶</a>
+<a href="#" aria-label="Instagram" title="Instagram">◎</a>
+<a href="https://www.linkedin.com/in/nasim-mahmud-087684210?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" title="LinkedIn">in</a>
+<a href="#" aria-label="Website" title="Website">◎</a>
+</div>
+</div>
+
+<div class="panel" id="education"><h2>Education</h2><div class="under"></div>
+<div class="timeline">
+<div class="edu"><span class="dot"></span><span class="pill">Ongoing</span><b>🎓 &nbsp; B.Sc. (Honours) 4th Year</b><small>Zoology<br>Govt. Shah Sultan College, Bogura</small></div>
+<div class="edu"><span class="dot"></span><b>🏫 &nbsp; HSC</b><small>Gabtoli Govt College<br>Group: Science</small></div>
+<div class="edu"><span class="dot"></span><b>🏫 &nbsp; SSC</b><small>Enayet Ali High School</small></div>
+</div>
+<div class="usg" id="usg"><div class="usgmark">USG</div><div><b>United Stars Global</b><small>Working with United Stars Global<br>A Multi-National Company</small></div>›</div>
+</div>
+
+<div class="side">
+<div class="panel" id="travel"><h2>Travel Gallery</h2><div class="under"></div>
+<div class="travel">
+<div><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Cox%27s_Bazar_beach_%283991311%29.jpg" alt="Cox’s Bazar"><b>📍 Cox’s Bazar</b><small>Bangladesh</small></div>
+<div><img src="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-khagrachhari/2024/12/a6b66b0d0ae6486187467964d1acde19.JPG" alt="Khagrachari"><b>📍 Khagrachari</b><small>Bangladesh</small></div>
+<div><img src="https://www.parjatanbichitra.com/wp-content/uploads/2025/02/476434268_1142638000603944_7410182804937827187_n.webp" alt="Bandarban"><b>📍 Bandarban</b><small>Bangladesh</small></div>
+<div><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80" alt="Pokhara"><b>📍 Pokhara</b><small>Nepal</small></div>
+<div><img src="https://images.unsplash.com/photo-1613052682223-4b5c5f1d7f57?auto=format&fit=crop&w=500&q=80" alt="Cox’s Bazar"><b>📍 Cox’s Bazar</b><small>Bangladesh</small></div>
+<div><img src="https://images.unsplash.com/photo-1589307357832-9f5e4e7f8c0c?auto=format&fit=crop&w=500&q=80" alt="Sundarbans"><b>📍 Sundarbans</b><small>Bangladesh</small></div>
+<div><img src="https://images.unsplash.com/photo-1609342122563-4b9b9c3d3c55?auto=format&fit=crop&w=500&q=80" alt="Paharpur"><b>📍 Paharpur</b><small>Bangladesh</small></div>
+</div></div>
+<div class="panel" id="sports" style="margin-top:10px"><h2>Sports & Hobbies</h2><div class="under"></div>
+<div class="sports">
+<div class="sport"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=600&q=80"><b>⚽ Football</b></div>
+<div class="sport"><img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80"><b>🏏 Cricket</b></div>
+<div class="sport"><img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=600&q=80"><b>🏐 Volleyball</b></div>
+</div></div>
+<div class="panel" id="gallery" style="margin-top:10px"><h2>Quick Info</h2><div class="quick">
+<div>📍<b>Location</b>Bogura, Bangladesh</div><div>📞<b>Phone</b>+880 1518 993160</div><div>✉️<b>Email</b>nasimmahmud5942@gmail.com</div><div>🌐<b>Website</b>nasimmamhud22.github.io</div>
+</div></div>
+</div>
+</section>
+</main>
+<footer id="contact">━━━━　⛰　“Explore the world, collect memories, not things.”　━━━━</footer>
+</body>
+</html>
